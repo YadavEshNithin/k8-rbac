@@ -57,7 +57,7 @@ metadata:
   # "namespace" omitted since ClusterRoles are not namespaced
   name: roboshop_cluster
 rules:
-- apiGroups: [""]
+- apiGroups: ["v1"]
   #
   # at the HTTP level, the name of the resource for accessing Secret
   # objects is "secrets"
