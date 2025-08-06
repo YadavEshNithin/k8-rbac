@@ -1,0 +1,20 @@
+apiVersion: v1
+data:
+  mapRoles: |
+    - rolearn: arn:aws:iam::010666226306:role/eksctl-roboshop-nodegroup-roboshop-NodeInstanceRole-ekG5fKPK8jQL
+      groups:
+      - system:bootstrappers
+      - system:nodes
+      username: system:node:{{EC2PrivateDNSName}}
+  mapUsers: |
+    - groups:
+      - roboshop_trainee
+      userarn: arn:aws:iam::010666226306:user/suresh
+      username: suresh
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2025-08-06T10:57:54Z"
+  name: aws-auth
+  namespace: kube-system
+  resourceVersion: "1362"
+  uid: 41b8f60a-6eea-4eb9-a2b9-22f6f22a62c4
